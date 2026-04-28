@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DKV Creative Studio | Jasa Desain Siswa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f6f8fc;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #2563eb;
+    }
+
+    .logo span {
+      color: #111827;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #374151;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #2563eb;
+      border: 2px solid #2563eb;
+    }
+
+    .btn-outline:hover {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 90px 0;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 700;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 22px;
+      color: #111827;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 20px 45px rgba(37,99,235,0.16);
+    }
+
+    .mockup {
+      background: #111827;
+      border-radius: 22px;
+      padding: 20px;
+      color: white;
+    }
+
+    .mockup-top {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: #60a5fa;
+      border-radius: 50%;
+    }
+
+    .mockup-content {
+      display: grid;
+      gap: 14px;
+    }
+
+    .mockup-box {
+      min-height: 70px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      padding: 18px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: #dbeafe;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      width: 46px;
+      height: 46px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: #2563eb;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .portfolio-item {
+      min-height: 230px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      color: #ffffff;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      box-shadow: 0 15px 35px rgba(37,99,235,0.2);
+    }
+
+    .pricing {
+      background: #111827;
+    }
+
+    .pricing .section-title h2,
+    .pricing .section-title p {
+      color: #ffffff;
+    }
+
+    .price-card {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 34px;
+      color: #2563eb;
+      font-weight: 900;
+      margin: 14px 0;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin: 22px 0;
+      color: #4b5563;
+    }
+
+    .price-card li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: #ffffff;
+      text-align: center;
+      border-radius: 32px;
+      padding: 60px 28px;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 14px;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 26px;
+      color: #e5e7eb;
+    }
+
+    .cta .btn {
+      background: #ffffff;
+      color: #2563eb;
+    }
+
+    footer {
+      background: #ffffff;
+      padding: 36px 0;
+      text-align: center;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-3,
+      .steps,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">DKV<span>Creative</span></div>
+        <div class="nav-links">
+          <a href="#layanan">Layanan</a>
+          <a href="#alur">Alur Order</a>
+          <a href="#portfolio">Portofolio</a>
+          <a href="#harga">Harga</a>
+          <a href="#kontak" class="btn">Order Sekarang</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Program Kreatif Siswa DKV</span>
+        <h1>Jasa Desain Profesional oleh <span>Siswa DKV</span></h1>
+        <p>Kami membantu membuat desain poster, feed Instagram, banner, logo sederhana, dan thumbnail YouTube dengan konsep kreatif, rapi, dan siap digunakan untuk kebutuhan sekolah, UMKM, organisasi, dan kegiatan masyarakat.</p>
+        <div class="hero-actions">
+          <a href="#kontak" class="btn">Pesan Desain</a>
+          <a href="#portfolio" class="btn btn-outline">Lihat Portofolio</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="mockup">
+          <div class="mockup-top">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-box">Poster Kegiatan Sekolah</div>
+            <div class="mockup-box">Feed Instagram UMKM</div>
+            <div class="mockup-box">Thumbnail YouTube Kreatif</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="layanan">
+    <div class="container">
+      <div class="section-title">
+        <h2>Layanan Desain</h2>
+        <p>Pilih jenis desain sesuai kebutuhan. Semua karya dikerjakan melalui proses brief, konsep, desain, revisi, dan finalisasi.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Poster Digital</h3>
+          <p>Desain poster untuk kegiatan sekolah, seminar, lomba, promosi, dan pengumuman.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Feed Instagram</h3>
+          <p>Desain konten media sosial yang menarik, konsisten, dan cocok untuk branding.</p>
+        </div>
+        <div class="card">
+          <div class="icon">▶️</div>
+          <h3>Thumbnail YouTube</h3>
+          <p>Thumbnail kreatif dengan teks kuat, visual menarik, dan mudah menarik perhatian.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🏷️</div>
+          <h3>Logo Sederhana</h3>
+          <p>Logo sederhana untuk komunitas, kelas, organisasi, produk UMKM, dan kegiatan.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🖼️</div>
+          <h3>Banner & Spanduk</h3>
+          <p>Desain banner untuk acara sekolah, promosi, dan kebutuhan publikasi cetak.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📄</div>
+          <h3>Brosur & Flyer</h3>
+          <p>Desain promosi informatif untuk produk, jasa, kegiatan, atau profil lembaga.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="alur" style="background:#eef4ff;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Alur Pemesanan</h2>
+        <p>Proses kerja dibuat seperti dunia industri agar siswa terbiasa melayani klien secara profesional.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Isi Brief</h3>
+          <p>Klien memberikan kebutuhan desain.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Konsep</h3>
+          <p>Siswa menyusun ide visual.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Desain</h3>
+          <p>Proses pembuatan desain.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Finalisasi</h3>
+          <p>Revisi dan kirim file akhir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contoh Portofolio</h2>
+        <p>Berikut contoh kategori karya yang dapat dibuat oleh tim desain siswa DKV.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <h3>Poster Seminar</h3>
+          <p>Desain informatif dan elegan.</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Feed UMKM</h3>
+          <p>Visual promosi produk lokal.</p>
+        </div>
+        <div class="portfolio-item">
+          <h3>Banner Sekolah</h3>
+          <p>Publikasi kegiatan resmi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="harga" class="pricing">
+    <div class="container">
+      <div class="section-title">
+        <h2>Paket Jasa Desain</h2>
+        <p>Harga dapat disesuaikan dengan kebijakan sekolah atau program kewirausahaan siswa.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="price-card">
+          <h3>Paket Basic</h3>
+          <div class="price">Rp10K</div>
+          <ul>
+            <li>1 desain feed/poster</li>
+            <li>1 kali revisi</li>
+            <li>File JPG/PNG</li>
+          </ul>
+          <a href="#kontak" class="btn">Pilih Paket</a>
+        </div>
+        <div class="price-card">
+          <h3>Paket Creative</h3>
+          <div class="price">Rp25K</div>
+          <ul>
+            <li>Poster / banner digital</li>
+            <li>2 kali revisi</li>
+            <li>File siap upload/cetak</li>
+          </ul>
+          <a href="#kontak" class="btn">Pilih Paket</a>
+        </div>
+        <div class="price-card">
+          <h3>Paket Pro</h3>
+          <div class="price">Rp50K</div>
+          <ul>
+            <li>3 desain media sosial</li>
+            <li>2 kali revisi</li>
+            <li>Konsep visual konsisten</li>
+          </ul>
+          <a href="#kontak" class="btn">Pilih Paket</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="container">
+      <div class="cta">
+        <h2>Butuh Desain untuk Kegiatanmu?</h2>
+        <p>Hubungi tim DKV Creative Studio sekarang. Kami siap membantu membuat desain yang menarik, rapi, dan profesional.</p>
+        <a href="https://wa.me/6285340955000?text=Halo%20saya%20ingin%20order%20desain%20poster%20DKV" class="btn">Order via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 DKV Creative Studio. Program Jasa Desain Siswa DKV.</p>
+      <p>Dikelola sebagai media praktik, Guru Mata Pelajaran Tajahuddin.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
