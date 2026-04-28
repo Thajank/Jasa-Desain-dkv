@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DKV Creative Studio | Jasa Desain Siswa</title>
+
   <style>
     * {
       margin: 0;
@@ -286,6 +287,54 @@
       box-shadow: 0 15px 35px rgba(37,99,235,0.2);
     }
 
+    .video-section {
+      background: #eef4ff;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .video-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #111827;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-content {
+      padding: 20px;
+    }
+
+    .video-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .video-content p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
     .pricing {
       background: #111827;
     }
@@ -355,7 +404,8 @@
       .hero-grid,
       .grid-3,
       .steps,
-      .portfolio-grid {
+      .portfolio-grid,
+      .video-grid {
         grid-template-columns: 1fr;
       }
 
@@ -379,6 +429,7 @@
           <a href="#layanan">Layanan</a>
           <a href="#alur">Alur Order</a>
           <a href="#portfolio">Portofolio</a>
+          <a href="#video-karya">Video</a>
           <a href="#harga">Harga</a>
           <a href="#kontak" class="btn">Order Sekarang</a>
         </div>
@@ -508,6 +559,47 @@
         <div class="portfolio-item">
           <h3>Banner Sekolah</h3>
           <p>Publikasi kegiatan resmi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video-karya" class="video-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Video Karya Siswa</h2>
+        <p>Kumpulan video hasil karya siswa DKV, dokumentasi proses kreatif, dan portofolio videografi.</p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Video Karya Siswa 1" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <h3>Video Profil Sekolah</h3>
+            <p>Karya videografi siswa untuk memperkenalkan lingkungan sekolah.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Video Karya Siswa 2" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <h3>Video Promosi UMKM</h3>
+            <p>Konten promosi produk lokal hasil kolaborasi siswa dan masyarakat.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Video Karya Siswa 3" allowfullscreen></iframe>
+          </div>
+          <div class="video-content">
+            <h3>Behind The Scene</h3>
+            <p>Dokumentasi proses produksi desain, shooting, dan editing siswa DKV.</p>
+          </div>
         </div>
       </div>
     </div>
